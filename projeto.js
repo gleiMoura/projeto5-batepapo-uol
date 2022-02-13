@@ -5,6 +5,7 @@ let login_name = input.value;
 let section = document.querySelector("section");
 let old_data = [];
 let store_data = [];
+let sum = 0;
 
 function takeName(){
     list_name = [];
@@ -24,7 +25,7 @@ function doLogin(answer){
     }
 
    putMessages();
-   setInterval(putNewMessages, 3000)
+   setInterval(putNewMessages, 3000);
 }
 
 function chooseOtherName(answer){
@@ -93,31 +94,39 @@ function putNewMessages(){
     
     printNewData(arr3);
 
-    old_data = new_data;
+    old_data = new_data
+
+    let element = document.querySelector(".new" + sum);
+    if(element !== null){
+    element.scrollIntoView();
+    }
         }
 }
 
 function printNewData(list){
+    sum++
     for(let i = 0; i < list.length; i++){
         if(list[i].type === "status"){
             section.innerHTML += `
-            <div class="main_message ${list[i].type} new>(${list[i].time}) <b>${list[i].from}</b> ${list[i].text}</div>
+            <div class="main_message ${list[i].type} new${sum}">(${list[i].time}) <b>${list[i].from}</b> ${list[i].text}</div>
         `
         }else if(list[i].type === "message"){
             section.innerHTML += `
-            <div class="main_message ${list[i].type} new">(${list[i].time}) <b>${list[i].from}</b> para <b>${list[i].to}</b>: ${list[i].text}</div>
+            <div class="main_message ${list[i].type} new${sum}">(${list[i].time}) <b>${list[i].from}</b> para <b>${list[i].to}</b>: ${list[i].text}</div>
         `
         }else if(list[i].type === "private_message"){
             section.innerHTML += `
-            <div class="main_message ${list[i].type} new">(${list[i].time}) <b>${list[i].from}</b> reservadamente para <b>${list[i].to}</b>: ${list[i].text}</div>
+            <div class="main_message ${list[i].type} new${sum}">(${list[i].time}) <b>${list[i].from}</b> reservadamente para <b>${list[i].to}</b>: ${list[i].text}</div>
         `
         }  
     }
+    console.log(sum)
 }
 
 
 clickEnter();
 setInterval(continueOn, 5000);
+ 
 /*0: {from: 'umNomeAleatórioAí', to: 'Todos', text: 'sai da sala...', type: 'status', time: '04:24:15'}*/
 
 /** */

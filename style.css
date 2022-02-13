@@ -67,6 +67,7 @@ section{
     background: #F3F3F3;
     margin-top:85px;
     padding-bottom:100px;
+    overflow-y: scroll;
 }
 footer{
     display: flex;
@@ -105,6 +106,7 @@ ion-icon{
 }
 /*messeges*/
 .main_message{
+    width: 50%;
     margin: 4px 0;
     text-align: left;
     font-family: 'Roboto';
