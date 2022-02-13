@@ -104,12 +104,20 @@ ion-icon{
     display: none;
 }
 /*messeges*/
-.messege{
+.main_message{
     margin: 4px 0;
     text-align: left;
     font-family: 'Roboto';
     padding: 10px;
     height: 48px;
-    background-color: gray;
     border-radius: 2px;
+}
+.status{
+    background-color: #DCDCDC;
+}
+.message{
+    background-color: #FFFFFF;
+}
+.private_message{
+    background-color: #FFDEDE;
 }
