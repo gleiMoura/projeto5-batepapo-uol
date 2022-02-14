@@ -111,7 +111,7 @@ ion-icon{
     text-align: left;
     font-family: 'Roboto';
     padding: 10px;
-    height: 48px;
+    height: 100px;
     border-radius: 2px;
 }
 .status{
@@ -122,4 +122,41 @@ ion-icon{
 }
 .private_message{
     background-color: #FFDEDE;
+}
+.back_black{
+    position: fixed;
+    width: 30%;
+    height: 100vh;
+    left: 0;
+    top:0;
+    background-color: rgba(27, 25, 25, 0.652);
+    z-index: 4;
+}
+.choose{
+    position: fixed;
+    width: 70%;
+    right: 0;
+    top:0;
+    bottom:0;
+    background-color: white;
+    font-family: 'Roboto';
+    text-align: left;
+    z-index: 2;
+    padding:20px;
+    border: 1px solid gray;
+    overflow-y: scroll;
+}
+.choose h3{
+    text-align: center;
+    color: black;
+    z-index: 2;
+}
+.choose p{
+    margin-left: 4px;
+    z-index: 2;
+}
+.it{
+    margin: 15px;
+    display: flex;
+    align-items: center;
 }

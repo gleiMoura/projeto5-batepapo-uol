@@ -18,15 +18,26 @@
     </main>
 
     <main class = "appear_after_login hide">
+        <div class="back_black hide" onclick="withdrawBackBlack()"></div>
+        <div class="choose hide">
+            <h3>Escolha a visibilidade:</h3>
+            <div class="it" onclick = "choosingPublicOrPrivated('message')"><ion-icon name="lock-open"></ion-icon> Público<ion-icon name="checkmark-circle" class="message hide"></ion-icon></div>
+            <div class = "it"  onclick = "choosingPublicOrPrivated('privated_message')"><ion-icon name="lock-closed"></ion-icon> Privado <ion-icon name="checkmark-circle" class="privated_message hide"></ion-icon></div>
+
+            <h3><b>Escolha um particpante <br> para enviar mensagem</b></h3>
+            <div class="todos_message it" onclick = "chooseParticipant('Todos')"> <ion-icon name="person-circle-outline"></ion-icon> Todos <ion-icon name="checkmark-circle" class="Todos hide"></ion-icon></div>
+            <div class="participant"></div>
+        </div>
+
         <header>
             <img src="images/logo.png" alt="logo">
-            <ion-icon name="people"></ion-icon>
+            <ion-icon name="people" onclick = "appearOptions()"></ion-icon>
         </header>
         <section>
         </section>
         <footer>
             <textarea placeholder="Escreva aqui..."></textarea>
-            <ion-icon name="paper-plane-outline"></ion-icon>
+                <ion-icon name="paper-plane-outline" onclick="sendMessages()"></ion-icon>
         </footer>
     </main>
     
